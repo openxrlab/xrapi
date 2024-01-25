@@ -20,15 +20,11 @@ OpenXRLab XRAPI is an open source implementation of the 《信息技术 移动�
 
 <table>
     <tr>
-        <td><center><video src="https://github.com/openxrlab/xrapi/assets/2736286/297e56ef-a59d-4458-a372-45010f3d17af" >图3 高圆圆</center></td>
-        <td ><center><video src="https://github.com/openxrlab/xrapi/assets/2736286/b6a2ca47-52d4-4393-a430-24c388b16c47"  >图4 高圆圆</center> </td>
-        <td ><center><video src="https://github.com/openxrlab/xrapi/assets/2736286/11bffaa9-bbe9-44be-9648-a2b9af41c98f"  >图4 高圆圆</center> </td>
+        <td><center><video src="https://github.com/openxrlab/xrapi/assets/2736286/297e56ef-a59d-4458-a372-45010f3d17af" >demo01</center></td>
+        <td ><center><video src="https://github.com/openxrlab/xrapi/assets/2736286/b6a2ca47-52d4-4393-a430-24c388b16c47"  >demo01</center> </td>
+        <td ><center><video src="https://github.com/openxrlab/xrapi/assets/2736286/11bffaa9-bbe9-44be-9648-a2b9af41c98f"  >demo01</center> </td>
     </tr>
 </table>
-
-
-| :----: | :----: | :----: |
-| <video src="" width=200/></video> | <video src="" width=200/></video> | <video src="" width=200/></video> |
 
 
 ### **Major Features**
