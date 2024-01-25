@@ -15,7 +15,7 @@
 
 ## Introduction
 
-OpenXRLab XRAPI is an open source implementation of the 《信息技术 移动设备增强现实系统应用接口》(Information technology - Application interfaces of augmented reality system for mobile devices). This standard specifies the data types and interface definitions for mobile device augmented reality system application development, and be used to guide the design, development and implementation of mobile device augmented reality systems. XRAPI is a part of the OpenXRLab project, and we wish that the XRAPI could connect the industry and academia, give full play to their respective advantages, and open closed loops to promote ecological development.
+OpenXRLab XRAPI is an open source implementation of the 《信息技术 移动设备增强现实系统应用接口》(Information technology - Application interfaces of augmented reality system for mobile devices). This standard specifies the data types and interface definitions for mobile device augmented reality system application development, and be used to guide the design, development and implementation of mobile device augmented reality systems. XIAPI is part of the OpenXRLab project. We hope that XIAPI can connect industry and academia, give full play to their respective advantages, and form a closed loop to promote ecological development.
 
 https://user-images.githubusercontent.com/44204704/187863580-e3a1869e-0ff2-4319-8e86-9c669f2b15ef.mp4
 
@@ -36,7 +36,7 @@ XRAPI includes the following interface modules:
 
 ## Introduction to standards
 
-### Information technology - Application interfaces of augmented reality system formobile devices
+### Information technology - Application interfaces of augmented reality system for mobile devices
 
 * Scope of application: The standard specifies the data types and interfaces for mobile device augmented reality system application development.
 
@@ -79,7 +79,7 @@ XRAPI is an open source project that is contributed by researchers and
 engineers from both the academia and the industry.
 We appreciate all the contributors who implement their methods or add new features,
 as well as users who give valuable feedbacks.
-We wish that the open source implementation xrapi could connect the industry and academia, give full play to their respective advantages, and open closed loops to promote ecological development.
+We hope that XIAPI can connect industry and academia, give full play to their respective advantages, and form a closed loop to promote ecological development.
 
 
 ## Projects in OpenXRLab
