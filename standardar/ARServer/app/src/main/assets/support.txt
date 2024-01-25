@@ -1,0 +1,33 @@
+[
+    {
+        "SLAM": [
+            {
+                "HUAWEI": [
+                    {
+                        "name": "huawei"
+                    },
+                    {
+                        "Model": [
+                            {
+                                "model": "TAS-AL00",
+                                "name": "mate30"
+                            },
+                            {
+                                "model": "LIO-AN00",
+                                "name": "mate30pro"
+                            },
+                            {
+                                "model": "ANA-AN00",
+                                "name": "p40"
+                            },
+                            {
+                                "model": "ELS-AN00",
+                                "name": "p40pro"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

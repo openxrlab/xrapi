@@ -1,0 +1,14 @@
+
+.idea/
+*.iml
+.settings/
+.vscode/
+.project
+.classpath
+*.apk
+.gradle/
+.externalNativeBuild/
+build/
+local.properties
+
+

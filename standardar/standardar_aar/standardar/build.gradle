@@ -1,0 +1,91 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "2.4.0.2"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11 -fexceptions -frtti"
+                abiFilters  "arm64-v8a"
+                arguments "-DANDROID_STL=c++_static", "-DANDROID_CPP_FEATURES=rtti exceptions", "-DANDROID_TOOLCHAIN=clang"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = (
+                ['src/main/java', '../commonlibrary/src/main/java', '../../common/src/main/java']
+            )
+            aidl.srcDirs = (
+                    ['../../common/src/main/aidl']
+            )
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+task makeJar(type:Copy){
+    delete '../../../released/sdk/jar/standardar.jar'
+    from('build/intermediates/packaged-classes/release/')
+    into('../../../released/sdk/jar/')
+    include('classes.jar')
+    rename('classes.jar', 'standardar.jar')
+}
+makeJar.mustRunAfter build
+makeJar.dependsOn("assembleRelease")
+
+task copyJniLibs(type: Copy) {
+    delete fileTree(dir: file('../../../released/sdk/libs/'), include: '**/*.so')
+    from fileTree(dir: file(buildDir.absolutePath + '/intermediates/library_and_local_jars_jni/release/'), include: '**/*.so')
+    into file('../../../released/sdk/libs/')
+}
+copyJniLibs.mustRunAfter build
+
+task copyIncludesFiles(type: Copy) {
+    from ('../../standardar/')
+    into ('../../../released/sdk/includes/')
+    include('StandardAR.h')
+}
+
+task copyOmsJar(type: Copy) {
+    from ('libs/')
+    into('../../../released/sdk/jar/')
+}
+
+task makeSDK(type: Copy) {
+    delete '../../../released/sdk/aar/standardar.aar'
+    from ('build/outputs/aar/')
+    into ('../../../released/sdk/aar/')
+    include('standardar-release.aar')
+    rename('standardar-release.aar', 'standardar.aar')
+}
+makeSDK.mustRunAfter build
+makeSDK.dependsOn("assembleRelease", makeJar, copyJniLibs, copyIncludesFiles, copyOmsJar)
+
+build.mustRunAfter clean

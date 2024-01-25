@@ -1,0 +1,95 @@
+<!--
+   Copyright 2017 Google Inc.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.standardar.examples.c.standardar.HelloArActivity">
+
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top" />
+
+    <TextView
+        android:id="@+id/initText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Initializing\nPlease Move Camera"
+        android:textSize="40dp"
+        android:textColor="@android:color/holo_red_light"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"/>
+    <ImageView
+        android:id="@+id/initImage"
+        android:layout_width="@dimen/imageWidth"
+        android:layout_height="@dimen/imageHeight"
+        android:src="@drawable/round_arrow"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/initText"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true">
+        <android.widget.Button
+            android:id="@+id/plane"
+            android:layout_width="@dimen/buttonWidth"
+            android:layout_height="@dimen/buttonHeight"
+            android:background="@drawable/btn_bg"
+            android:text="@string/plane"
+            android:textAllCaps="false"
+            android:textColor="@color/font"/>
+        <android.widget.Button
+            android:id="@+id/cloud"
+            android:layout_width="@dimen/buttonWidth"
+            android:layout_height="@dimen/buttonHeight"
+            android:background="@drawable/btn_bg"
+            android:text="@string/pointCloud"
+            android:textAllCaps="false"
+            android:textColor="@color/font"
+            android:layout_below="@+id/plane"/>
+        <android.widget.Button
+            android:id="@+id/start"
+            android:layout_width="@dimen/buttonWidth"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/cloud"
+            android:background="@drawable/btn_bg"
+            android:text="@string/start"
+            android:textAllCaps="false"
+            android:textColor="@color/font"/>
+
+        <android.widget.Button
+            android:id="@+id/stop"
+            android:layout_width="@dimen/buttonWidth"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/start"
+            android:background="@drawable/btn_bg"
+            android:text="@string/stop"
+            android:textAllCaps="false"
+            android:textColor="@color/font"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

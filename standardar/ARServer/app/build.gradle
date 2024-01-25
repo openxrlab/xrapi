@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword '123456'
+            storeFile file('../key.jks')
+            storePassword '123456'
+        }
+    }
+
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "com.standardar.xrserver"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 22
+        versionName "2.4.0.2"
+        flavorDimensions "all"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            'arm64-v8a'
+        }
+    }
+    buildTypes {
+        debug {
+            buildConfigField("boolean","Analytics_Enable","false")
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            buildConfigField("boolean","Analytics_Enable","true")
+        }
+    }
+    repositories {
+        flatDir { dirs '../HandGestureLibrary/libs' }
+    }
+
+    productFlavors {
+        full {
+            applicationId "com.standardar.xrserver"
+            buildConfigField("boolean","SLAM","true")
+            buildConfigField("boolean","HAND","true")
+            buildConfigField("boolean","MARKER","true")
+            buildConfigField("boolean","FACE_MESH","true")
+            manifestPlaceholders = ["RGBD_SLAM":"@string/TRUE",
+                                    "CLOUD_ANCHOR":"@string/TRUE",
+                                    "HAND_GESTURE":"@string/TRUE",
+                                    "MARKER":"@string/TRUE",
+                                    "FACE_MESH":"@string/TRUE"
+            ]
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation project(':CommonLibrary')
+    implementation project(':Sensor')
+    implementation project(':client')
+
+    //full依赖
+    fullImplementation project(':RGBDSLAMLibrary')
+    fullImplementation project(':HandGestureLibrary')
+    fullImplementation project(':MarkerLibrary')
+    fullImplementation project(':FaceDetectLibrary')
+    fullImplementation project(':FaceMeshLibrary')
+    fullImplementation project(':BodyDetectLibrary')
+    //fullImplementation project(':ObjectTrackingLibrary')
+
+    //implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    //implementation 'com.android.support:design:28.0.0'
+}
+
+task makeFullServer(type: Copy) {
+//    delete ('../../../released/sdk/apk/XRServer.apk')
+    from ('build/outputs/apk/full/release/')
+    into ('../../../released/sdk/apk/')
+    include('app-full-release.apk')
+    rename('app-full-release.apk', 'StandardAR_Server.apk')
+}
+
+makeFullServer.dependsOn("assembleFullRelease")

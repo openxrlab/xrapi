@@ -1,0 +1,1 @@
+include ':app', ':CommonLibrary', ':MarkerLibrary',':RGBDSLAMLibrary', ':HandGestureLibrary', ':FaceDetectLibrary', ':FaceMeshLibrary', ':BodyDetectLibrary',':Sensor', ':client'//, ':ObjectTrackingLibrary'

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ARServer</string>
+    <string name="Binder">binder</string>
+    <string name="MultiAlgorithm">MultiAlgorithm</string>
+    <string name="DoubleStream">DoubleStream</string>
+    <string name="RGB_SLAM">RGBSLAM</string>
+    <string name="RGBD_SLAM">RGBDSLAM</string>
+    <string name="HAND_GESTURE">HAND_GESTURE</string>
+    <string name="CLOUD_ANCHOR">CLOUD_ANCHOR</string>
+    <string name="MARKER">MARKER</string>
+    <string name="FACE_MESH">FACE_MESH</string>
+    <string name="TRUE">true</string>
+    <string name="FALSE">false</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>

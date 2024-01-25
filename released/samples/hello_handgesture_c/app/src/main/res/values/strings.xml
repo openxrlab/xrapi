@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">HandgestureC</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="plane">Plane</string>
+    <string name="pointCloud">Cloud</string>
+    <string name="feature">Feature</string>
+    <string name="coordinate">Coordinate</string>
+    <string name="delete">Delete</string>
+    <string name="screenShot">ScreenShot</string>
+    <string name="debugView">3DView</string>
+    <string name="Switch">Switch</string>
+
+</resources>
