@@ -9,7 +9,6 @@
 <div align="left">
 
 
-[![LICENSE](https://img.shields.io/github/license/openxrlab/xrapi)](https://github.com/openxrlab/xrapi/blob/main/LICENSE)
 
 </div>
 
