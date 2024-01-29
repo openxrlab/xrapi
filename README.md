@@ -14,7 +14,7 @@
 
 ## Introduction
 
-OpenXRLab XRAPI is an open source implementation of the 《信息技术 移动设备增强现实系统应用接口》(Information technology - Application interfaces of augmented reality system for mobile devices). This standard specifies the data types and interface definitions for mobile device augmented reality system application development, and be used to guide the design, development and implementation of mobile device augmented reality systems. XIAPI is part of the OpenXRLab project. We hope that XIAPI can connect industry and academia, give full play to their respective advantages, and form a closed loop to promote ecological development.
+OpenXRLab XRAPI is an open source implementation of the "Information technology - Application interfaces of augmented reality system for mobile devices"(《信息技术 移动设备增强现实系统应用接口》). This standard specifies the data types and interface definitions for mobile device augmented reality system application development, and be used to guide the design, development and implementation of mobile device augmented reality systems. XIAPI is part of the OpenXRLab project. We hope that XIAPI can connect industry and academia, give full play to their respective advantages, and form a closed loop to promote ecological development.
 
 
 <table>
@@ -31,7 +31,7 @@ OpenXRLab XRAPI is an open source implementation of the 《信息技术 移动�
 The augmented reality system on mobile devices consists of modules such as real-time tracking and positioning, scale estimation, landmark recognition and tracking, 3D reconstruction, illumination estimation, face alignment, gesture recognition etc. 
 
 XRAPI includes the following interface modules: 
-* Real-time tracking and positioning: Use input data from mobile devices to calculate 6DoF pose.
+* Real-time 6DoF pose tracking: Use input data from mobile devices to calculate 6DoF pose.
 * Illumination estimation: Use video streams to calculate illumination information.
 * Scale estimation: Use input data to calculate scale information about the physical world.
 * Marker recognition and tracking: Marker recognition and tracking based on video streams.
