@@ -14,7 +14,7 @@
 
 ## Introduction
 
-OpenXRLab XRAPI is an open-source implementation of the Google ARCore and the "Information technology - Application interfaces of augmented reality system for mobile devices"(《信息技术 移动设备增强现实系统应用接口》). This standard specifies the data types and interface definitions for mobile device augmented reality system application development, and be used to guide the design, development and implementation of mobile device augmented reality systems. XIAPI is part of the OpenXRLab project. We hope that XIAPI can connect industry and academia, give full play to their respective advantages, and form a closed loop to promote ecological development.
+OpenXRLab XRAPI is an open-source implementation of the Google ARCore SDK and the "Information technology - Application interfaces of augmented reality system for mobile devices"(《信息技术 移动设备增强现实系统应用接口》). This standard specifies the data types and interface definitions for mobile device augmented reality system application development, and be used to guide the design, development and implementation of mobile device augmented reality systems. XIAPI is part of the OpenXRLab project. We hope that XIAPI can connect industry and academia, give full play to their respective advantages, and form a closed loop to promote ecological development.
 
 
 <table>
